@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+open extension UIView {
     typealias LayoutConfiguration = (_ configurationObject: GbrlLayoutConfiguration) -> GbrlLayoutConfiguration
     
     func layout(_ configuration: LayoutConfiguration) -> [NSLayoutConstraint] {

@@ -11,7 +11,7 @@ import UIKit
 /// Configuration object used inside the UIView.layout(_ configuration: LayoutConfiguration) closure inside of it you going to find all the functions you need to create constraints
 ///
 ///- Parameter owner - a UIView which will be used to create the constraints
-final class GbrlLayoutConfiguration {
+open final class GbrlLayoutConfiguration {
     
     private let ownerView: UIView
     public var constraints: [NSLayoutConstraint] = []
