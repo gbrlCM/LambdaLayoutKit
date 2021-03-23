@@ -231,8 +231,8 @@ public final class GbrlLayoutConfiguration {
     ///
     /// - Returns: The configurationObject making possible to chain functions.
     public func width(constantSize: CGFloat) -> Self {
-        let height = ownerView.heightAnchor.constraint(equalToConstant: constantSize)
-        constraints.append(height)
+        let width = ownerView.widthAnchor.constraint(equalToConstant: constantSize)
+        constraints.append(width)
         return self
     }
     
