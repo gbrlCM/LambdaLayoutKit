@@ -8,14 +8,16 @@
 import Foundation
 import UIKit
 
-@propertyWrapper open final class GbrlAutoLayout <View: UIView> {
+@propertyWrapper public final class GbrlAutoLayout <View: UIView> {
     private lazy var view: View = {
         let view = View(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    var wrappedValue: View {
+    public init(){}
+    
+     public var wrappedValue: View {
         return view
     }
 }

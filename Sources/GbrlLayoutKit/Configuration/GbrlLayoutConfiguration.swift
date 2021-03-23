@@ -11,19 +11,19 @@ import UIKit
 /// Configuration object used inside the UIView.layout(_ configuration: LayoutConfiguration) closure inside of it you going to find all the functions you need to create constraints
 ///
 ///- Parameter owner - a UIView which will be used to create the constraints
-open final class GbrlLayoutConfiguration {
+public final class GbrlLayoutConfiguration {
     
     private let ownerView: UIView
     public var constraints: [NSLayoutConstraint] = []
     
-    init(owner: UIView) {
+    public init(owner: UIView) {
         self.ownerView = owner
     }
     
     /// Type of relation of a given constraint
     ///
     /// The possible cases are equal, lessThan and greaterThan which are the three types of constraint relation
-    enum GbrlConstraintRelation {
+    public enum GbrlConstraintRelation {
         case equal, lessThan, greaterThan
         
         fileprivate func generateXAxisConstraint(for ownerAnchor: NSLayoutXAxisAnchor, attachTo anchor: NSLayoutXAxisAnchor, constant: CGFloat = 0) -> NSLayoutConstraint {
