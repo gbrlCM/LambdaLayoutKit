@@ -10,7 +10,7 @@ import UIKit
 
 /// Configuration object used inside the UIView.layout(_ configuration: LayoutConfiguration) closure inside of it you going to find all the functions you need to create constraints
 ///
-///- Parameter owner - a UIView which will be used to create the constraints
+///- Parameter owner: a UIView which will be used to create the constraints
 public final class GbrlLayoutConfiguration {
     
     private let ownerView: UIView
@@ -66,9 +66,9 @@ public final class GbrlLayoutConfiguration {
     
     //MARK: Common Constraints
     /// Configurate the constraint for the leftAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the leftAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo:  Anchor which the leftAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -79,9 +79,9 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the rightAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the rightAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the rightAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -91,10 +91,10 @@ public final class GbrlLayoutConfiguration {
         constraints.append(right)
         return self
     }
-    /// Configurate the constraint for the leadingAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the leadingAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// Configurate the constraint for the leadingAnchor of the owner view, append it to the constraints array and re:rn the configuration object.
+    /// - Parameter attachTo: Anchor which the leadingAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -105,9 +105,9 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the trailingAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the trailingAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the trailingAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -118,9 +118,9 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the centerXAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the centerXAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the centerXAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -142,9 +142,9 @@ public final class GbrlLayoutConfiguration {
     //MARK: Common Constraints
     
     /// Configurate the constraint for the centerYAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the centerYAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the centerYAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -155,9 +155,9 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the topAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the topAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the topAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -168,9 +168,9 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the bottomAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the bottomAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the bottomAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -188,9 +188,10 @@ public final class GbrlLayoutConfiguration {
     //MARK: Dimesions
     
     /// Configurate the constraint for the heightAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the heightAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the heightAnchor of the ownerView will be attached.
+    /// - Parameter relation: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
+    /// - Parameter multiplier: The value wich will multiply the constraint.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -201,7 +202,7 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the heightAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter constantSize - a constant value that will constrain the height of the view
+    /// - Parameter constantSize: a constant value that will constrain the height of the view
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -212,9 +213,10 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the widthAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter attachTo - Anchor which the widthAnchor of the ownerView will be attached.
-    /// - Parameter relationType - The type of constraint relation. The possible relations are: greater than, equal and less than.
-    /// - Parameter constant - The constant wich will be added to the constraints.
+    /// - Parameter attachTo: Anchor which the widthAnchor of the ownerView will be attached.
+    /// - Parameter relationType: The type of constraint relation. The possible relations are: greater than, equal and less than.
+    /// - Parameter constant: The constant wich will be added to the constraints.
+    /// - Parameter multiplier: The value wich will multiply the constraint.
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
@@ -225,7 +227,7 @@ public final class GbrlLayoutConfiguration {
         return self
     }
     /// Configurate the constraint for the widthAnchor of the owner view, append it to the constraints array and return the configuration object.
-    /// - Parameter constantSize - a constant value that will constrain the width of the view
+    /// - Parameter constantSize: a constant value that will constrain the width of the view
     ///
     /// For more information how a constraint behave you can check the Apple Auto Layout Guide.
     ///
