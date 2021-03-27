@@ -50,6 +50,23 @@ public extension UIView {
         }
     }
     
+    /// Create a layout witch strech the view to the top, leading, trailing and bottom anchors of the layout guide passed as parameter
+    ///
+    /// ```
+    /// let constraints: [NSLayoutConstraints] = view.stretchToBounds(of: view.layoutMarginsGuide)
+    /// ```
+    /// - Parameter layoutGuide: Layout guide which anchors will constraint the view
+    /// - Returns: Array of created constraints
+    func stretchToBoud (of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+        self.layout { anchors in
+          anchors
+                .top(attachTo: layoutGuide.topAnchor)
+                .leading(attachTo: layoutGuide.leadingAnchor)
+                .trailing(attachTo: layoutGuide.trailingAnchor)
+                .bottom(attachTo: layoutGuide.bottomAnchor)
+        }
+    }
+    
     /// Create a layout witch strech the view to the passed anchors
     ///
     /// ```
@@ -71,6 +88,17 @@ public extension UIView {
         }
     }
     
+    /// Create a layout witch strech the view to the passed anchors
+    ///
+    /// ```
+    /// let constraints: [NSLayoutConstraints] = view.stretchToBounds(top: leftView.topAnchor, left: leftView.leftAnchor
+    /// , right: rightView.rightAnchor, bottom: leftView.bottomAnchor)
+    /// ```
+    /// - Parameter top: anchor wich will constraint the topAnchor of the view
+    /// - Parameter left: anchor wich will constraint the leftAnchor of the view
+    /// - Parameter right: anchor wich will constraint the rightAnchor of the view
+    /// - Parameter bottom: anchor wich will constraint the bottom of the view
+    /// - Returns: Array of created constraints
     func stretchToBounds(top: NSLayoutYAxisAnchor, left: NSLayoutXAxisAnchor, right: NSLayoutXAxisAnchor, bottom: NSLayoutYAxisAnchor) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
@@ -81,11 +109,22 @@ public extension UIView {
         }
     }
     
-    func pinToCenter(of view: UIView)-> [NSLayoutConstraint] {
+    /**
+     pin
+     */
+    func pinToCenter(of view: UIView) -> [NSLayoutConstraint] {
         self.layout {anchors in
             anchors
                 .centerX(attachTo: view.centerXAnchor)
                 .centerY(attachTo: view.centerYAnchor)
+        }
+    }
+    
+    func pinToCenter(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+        self.layout { anchors in
+            anchors
+                .centerX(attachTo: layoutGuide.centerXAnchor)
+                .centerY(attachTo: layoutGuide.centerYAnchor)
         }
     }
     
