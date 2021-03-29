@@ -57,94 +57,13 @@ public extension UIView {
     /// ```
     /// - Parameter layoutGuide: Layout guide which anchors will constraint the view
     /// - Returns: Array of created constraints
-    func stretchToBoud (of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+    func stretchToBouds(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
         self.layout { anchors in
           anchors
                 .top(attachTo: layoutGuide.topAnchor)
                 .leading(attachTo: layoutGuide.leadingAnchor)
                 .trailing(attachTo: layoutGuide.trailingAnchor)
                 .bottom(attachTo: layoutGuide.bottomAnchor)
-        }
-    }
-    
-    /// Create a layout witch strech the view to the passed anchors
-    ///
-    /// ```
-    /// let constraints: [NSLayoutConstraints] = view.stretchToBounds(top: leftView.topAnchor, leading: leftView.trailingAnchor
-    /// , trailing: rightView.leadingAnchor, bottom: leftView.bottomAnchor)
-    /// ```
-    /// - Parameter top: anchor wich will constraint the topAnchor of the view
-    /// - Parameter leading: anchor wich will constraint the leadingAnchor of the view
-    /// - Parameter trailing: anchor wich will constraint the trailingAnchor of the view
-    /// - Parameter bottom: anchor wich will constraint the bottom of the view
-    /// - Returns: Array of created constraints
-    func stretchToBounds(top: NSLayoutYAxisAnchor, leading: NSLayoutXAxisAnchor, trailing: NSLayoutXAxisAnchor, bottom: NSLayoutYAxisAnchor)-> [NSLayoutConstraint] {
-        self.layout { anchors in
-            anchors
-                .top(attachTo: top)
-                .leading(attachTo: leading)
-                .trailing(attachTo: trailing)
-                .bottom(attachTo: bottom)
-        }
-    }
-    
-    /// Create a layout witch strech the view to the passed anchors
-    ///
-    /// ```
-    /// let constraints: [NSLayoutConstraints] = view.stretchToBounds(top: leftView.topAnchor, left: leftView.leftAnchor
-    /// , right: rightView.rightAnchor, bottom: leftView.bottomAnchor)
-    /// ```
-    /// - Parameter top: anchor wich will constraint the topAnchor of the view
-    /// - Parameter left: anchor wich will constraint the leftAnchor of the view
-    /// - Parameter right: anchor wich will constraint the rightAnchor of the view
-    /// - Parameter bottom: anchor wich will constraint the bottom of the view
-    /// - Returns: Array of created constraints
-    func stretchToBounds(top: NSLayoutYAxisAnchor, left: NSLayoutXAxisAnchor, right: NSLayoutXAxisAnchor, bottom: NSLayoutYAxisAnchor) -> [NSLayoutConstraint] {
-        self.layout { anchors in
-            anchors
-                .top(attachTo: top)
-                .left(attachTo: left)
-                .right(attachTo: right)
-                .bottom(attachTo: bottom)
-        }
-    }
-    
-    /**
-     pin
-     */
-    func pinToCenter(of view: UIView) -> [NSLayoutConstraint] {
-        self.layout {anchors in
-            anchors
-                .centerX(attachTo: view.centerXAnchor)
-                .centerY(attachTo: view.centerYAnchor)
-        }
-    }
-    
-    func pinToCenter(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
-        self.layout { anchors in
-            anchors
-                .centerX(attachTo: layoutGuide.centerXAnchor)
-                .centerY(attachTo: layoutGuide.centerYAnchor)
-        }
-    }
-    
-    func pinToCenter(of view: UIView, width: CGFloat, height: CGFloat) -> [NSLayoutConstraint] {
-        self.layout { anchors in
-            anchors
-                .centerX(attachTo: view.centerXAnchor)
-                .centerY(attachTo: view.centerYAnchor)
-                .width(constantSize: width)
-                .height(constantSize: height)
-        }
-    }
-    
-    func pinToCenter(of view: UIView, widthAnchor: NSLayoutDimension, heightAnchor: NSLayoutDimension) -> [NSLayoutConstraint] {
-        self.layout { anchors in
-            anchors
-                .centerX(attachTo: view.centerXAnchor)
-                .centerY(attachTo: view.centerYAnchor)
-                .width(attachTo: widthAnchor)
-                .height(attachTo: heightAnchor)
         }
     }
 }
