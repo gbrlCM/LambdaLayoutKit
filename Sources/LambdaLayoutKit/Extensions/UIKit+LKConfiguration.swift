@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public extension UIView {
-    typealias LayoutConfiguration = (_ configurationObject: GbrlLayoutConfiguration) -> GbrlLayoutConfiguration
+    typealias LayoutConfiguration = (_ configurationObject: LKConfiguration) -> LKConfiguration
     
     ///Create and activate Constraints configured by a closure with a configuration object as parameter
     ///

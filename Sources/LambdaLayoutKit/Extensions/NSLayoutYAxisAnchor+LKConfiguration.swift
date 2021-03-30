@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension NSLayoutYAxisAnchor {
-    func constraint(anchor: NSLayoutYAxisAnchor, relation: GbrlLayoutConfiguration.GbrlConstraintRelation, constant: CGFloat) -> NSLayoutConstraint {
+    func constraint(anchor: NSLayoutYAxisAnchor, relation: LKConfiguration.LKConstraintRelation, constant: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalTo: anchor, constant: constant)
@@ -20,7 +20,7 @@ extension NSLayoutYAxisAnchor {
         }
     }
     
-    func constraint(SystemSpaceBelowAnchor anchor: NSLayoutYAxisAnchor, relation: GbrlLayoutConfiguration.GbrlConstraintRelation, multiplier: CGFloat) -> NSLayoutConstraint {
+    func constraint(SystemSpaceBelowAnchor anchor: NSLayoutYAxisAnchor, relation: LKConfiguration.LKConstraintRelation, multiplier: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalToSystemSpacingBelow: anchor, multiplier: multiplier)

@@ -10,7 +10,7 @@ import UIKit
 
 extension NSLayoutDimension {
     
-    func constraint(anchor: NSLayoutDimension, relation: GbrlLayoutConfiguration.GbrlConstraintRelation, constant: CGFloat, multiplier: CGFloat) -> NSLayoutConstraint {
+    func constraint(anchor: NSLayoutDimension, relation: LKConfiguration.LKConstraintRelation, constant: CGFloat, multiplier: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
@@ -21,7 +21,7 @@ extension NSLayoutDimension {
         }
     }
     
-    func constraint(constant: CGFloat, relation: GbrlLayoutConfiguration.GbrlConstraintRelation) -> NSLayoutConstraint {
+    func constraint(constant: CGFloat, relation: LKConfiguration.LKConstraintRelation) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalToConstant: constant)

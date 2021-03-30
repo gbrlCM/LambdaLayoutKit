@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@propertyWrapper public final class GbrlAutoLayout <View: UIView> {
+@propertyWrapper public final class LKView <View: UIView> {
     private lazy var view: View = {
         let view = View(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false

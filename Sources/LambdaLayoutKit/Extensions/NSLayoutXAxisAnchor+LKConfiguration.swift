@@ -10,7 +10,7 @@ import UIKit
 
 extension NSLayoutXAxisAnchor {
     
-    func constraint(anchor: NSLayoutXAxisAnchor, relation: GbrlLayoutConfiguration.GbrlConstraintRelation, constant: CGFloat) -> NSLayoutConstraint {
+    func constraint(anchor: NSLayoutXAxisAnchor, relation: LKConfiguration.LKConstraintRelation, constant: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalTo: anchor, constant: constant)
@@ -21,7 +21,7 @@ extension NSLayoutXAxisAnchor {
         }
     }
     
-    func constraint(SystemSpaceAfterAnchor anchor: NSLayoutXAxisAnchor, relation: GbrlLayoutConfiguration.GbrlConstraintRelation, multiplier: CGFloat) -> NSLayoutConstraint {
+    func constraint(SystemSpaceAfterAnchor anchor: NSLayoutXAxisAnchor, relation: LKConfiguration.LKConstraintRelation, multiplier: CGFloat) -> NSLayoutConstraint {
         switch relation {
         case .equal:
             return self.constraint(equalToSystemSpacingAfter: anchor, multiplier: multiplier)
