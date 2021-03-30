@@ -28,7 +28,7 @@ public extension UIView {
     /// - Parameter configuration: Closure with the `configurationObject` of type `GbrlLayoutConfiguration` as its only parameter, this closure define the layout of the view.
     /// - Returns:The array of the created constraints
     func layout(_ configuration: LayoutConfiguration) -> [NSLayoutConstraint] {
-        let configObject = configuration(GbrlLayoutConfiguration(owner: self))
+        let configObject = configuration(LKConfiguration(owner: self))
         NSLayoutConstraint.activate(configObject.constraints)
         return configObject.constraints
     }
