@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 public protocol Layoutable: UIView {
-    typealias LayoutConfiguration = (_ configurationObject: LKConfiguration) -> LKConfiguration
-    func layout(_ configuration: LayoutConfiguration) -> [NSLayoutConstraint]
+    func layout(_ configuration: (_ configurationObject: LKConfiguration) -> LKConfiguration) -> [NSLayoutConstraint]
 }
 
 public extension Layoutable {
@@ -32,7 +31,7 @@ public extension Layoutable {
     /// ```
     /// - Parameter configuration: Closure with the `configurationObject` of type `GbrlLayoutConfiguration` as its only parameter, this closure define the layout of the view.
     /// - Returns:The array of the created constraints
-    func layout(_ configuration: LayoutConfiguration) -> [NSLayoutConstraint] {
+    func layout(_ configuration: (_ configurationObject: LKConfiguration) -> LKConfiguration) -> [NSLayoutConstraint] {
         let configObject = configuration(LKConfiguration(owner: self))
         NSLayoutConstraint.activate(configObject.constraints)
         return configObject.constraints
