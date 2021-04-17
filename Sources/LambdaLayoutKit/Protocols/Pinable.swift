@@ -46,7 +46,7 @@ public extension Pinable {
             - view: the which will be pinned to
         - returns: An Array of the created constraints
      */
-    func pinToCenter(of view: UIView) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenter(of view: UIView) -> [NSLayoutConstraint] {
         self.layout {anchors in
             anchors
                 .centerX(attachTo: view.centerXAnchor)
@@ -61,7 +61,7 @@ public extension Pinable {
             - layoutGuide: the which will be pinned to
         - returns: An Array of the created constraints
      */
-    func pinToCenter(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenter(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerX(attachTo: layoutGuide.centerXAnchor)
@@ -78,7 +78,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToTopLeft(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopLeft(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .left(attachTo: view.leftAnchor, constant: xMargin)
@@ -95,7 +95,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToTopLeft(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopLeft(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .left(attachTo: layoutGuide.leftAnchor, constant: xMargin)
@@ -112,7 +112,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToTopRight(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopRight(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .right(attachTo: view.rightAnchor, constant: xMargin)
@@ -129,7 +129,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToTopRight(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopRight(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .right(attachTo: layoutGuide.rightAnchor, constant: xMargin)
@@ -146,7 +146,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToBottomRight(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomRight(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .right(attachTo: view.rightAnchor, constant: xMargin)
@@ -163,7 +163,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToBottomRight(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomRight(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .right(attachTo: layoutGuide.rightAnchor, constant: xMargin)
@@ -180,7 +180,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToBottomLeft(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomLeft(of view: UIView, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .left(attachTo: view.leftAnchor, constant: xMargin)
@@ -197,7 +197,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the right
         - returns: An Array of the created constraints
      */
-    func pinToBottomLeft(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomLeft(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .left(attachTo: layoutGuide.leftAnchor, constant: xMargin)
@@ -213,7 +213,7 @@ public extension Pinable {
             - yMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToTopCenter(of view: UIView, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopCenter(of view: UIView, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerX(attachTo: view.centerXAnchor)
@@ -229,7 +229,7 @@ public extension Pinable {
             - yMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToTopCenter(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToTopCenter(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerX(attachTo: layoutGuide.centerXAnchor)
@@ -245,7 +245,7 @@ public extension Pinable {
             - yMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToBottomCenter(of view: UIView, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomCenter(of view: UIView, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerX(attachTo: view.centerXAnchor)
@@ -261,7 +261,7 @@ public extension Pinable {
             - yMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToBottomCenter(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToBottomCenter(of layoutGuide: UILayoutGuide, yMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerX(attachTo: layoutGuide.centerXAnchor)
@@ -277,7 +277,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToCenterLeft(of view: UIView, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenterLeft(of view: UIView, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerY(attachTo: view.centerYAnchor)
@@ -293,7 +293,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToCenterLeft(of layoutGuide: UILayoutGuide, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenterLeft(of layoutGuide: UILayoutGuide, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerY(attachTo: layoutGuide.centerYAnchor)
@@ -309,7 +309,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToCenterRight(of view: UIView, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenterRight(of view: UIView, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerY(attachTo: view.centerYAnchor)
@@ -325,7 +325,7 @@ public extension Pinable {
             - xMargin: constant value which will push the view towards the bottom
         - returns: An Array of the created constraints
     */
-    func pinToCenterRight(of layoutGuide: UILayoutGuide, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
+    @discardableResult func pinToCenterRight(of layoutGuide: UILayoutGuide, xMargin: CGFloat = 0) -> [NSLayoutConstraint] {
         self.layout { anchors in
             anchors
                 .centerY(attachTo: layoutGuide.centerYAnchor)

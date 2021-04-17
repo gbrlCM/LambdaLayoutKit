@@ -21,7 +21,7 @@ public extension Strechable {
     /// ```
     /// - Parameter view: View which anchors will constraint the view
     /// - Returns: Array of created constraints
-    func stretchToBounds(of view: UIView) -> [NSLayoutConstraint] {
+    @discardableResult func stretchToBounds(of view: UIView) -> [NSLayoutConstraint] {
         self.layout { anchors in
           anchors
                 .top(attachTo: view.topAnchor)
@@ -38,7 +38,7 @@ public extension Strechable {
     /// ```
     /// - Parameter layoutGuide: Layout guide which anchors will constraint the view
     /// - Returns: Array of created constraints
-    func stretchToBouds(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+    @discardableResult func stretchToBouds(of layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
         self.layout { anchors in
           anchors
                 .top(attachTo: layoutGuide.topAnchor)
