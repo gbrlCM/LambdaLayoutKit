@@ -15,10 +15,27 @@ Lambda Layout Kit (LK) is a library for dealing with auto layout in a simpler an
 LK uses Swift Package Manager as its distribution method, to use it you can fetch LK via XCode or adding it to your package.swift depencies list.
 
 ### Via XCode
-...
+1. In a Xcode project, click on "File"
+2. Click on "Swift Packages" and select "Add Package Dependency"
+3. Paste the web url for this repository: https://github.com/gbrlCM/LambdaLayoutKit.git
+4. Set Rules to Branch on "main"
+
+After this, you can fetch the latest changes to the framework  by selecting "Update to Latest Package Versions" in step 2.
 
 ### Via Package.swift
-...
+If you don't already have a `Package.swift` file, create one and add the following `.package` URL.
+```swift
+import PackageDescription
+
+let package = Package(
+    ...
+    dependencies: [
+        .package(url: "https://github.com/gbrlCM/LambdaLayoutKit.git", "1.1.2")
+    ],
+    ...
+)
+```
+
 
 ## Usage
 
