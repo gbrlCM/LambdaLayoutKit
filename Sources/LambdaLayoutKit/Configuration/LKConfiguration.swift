@@ -14,7 +14,7 @@ import UIKit
 public final class LKConfiguration {
     
     private let ownerView: UIView
-    public var constraints: [NSLayoutConstraint] = []
+    var constraints: [NSLayoutConstraint] = []
     
     public init(owner: UIView) {
         self.ownerView = owner
